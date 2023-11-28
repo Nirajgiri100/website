@@ -1,8 +1,10 @@
 @import 'config';
 @import 'menu';
+
 * {
     box-sizing: border-box;
 }
+
 body {
     @include background();
     background: $primary-color;
@@ -12,20 +14,23 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
 }
+
 //Headings
 h1, 
 h2, 
 h3 {
     margin: 0;
     font-weight: 400;
+
     &.lg-heading{
         font-size: 6rem;
     }
+
     &.sm-heading{
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
         background: rgba(lighten($primary-color, 2), 0.5);
-}
+    }
 }
 a {
     color: #fff;
@@ -40,9 +45,9 @@ header{
 .text-secondary{
     color: $secondary-color;
 }
+
 main{
     padding: 4rem;
-    // height: 100%;
     min-height: calc(100vh-60px);
 
     .icons{
@@ -50,9 +55,10 @@ main{
 
         a{
             padding: 0.4rem;
+            @include easeOut();
             &:hover{
                 color:$secondary-color;
-                @include easeOut();
+                
             }
         }
     }
@@ -65,7 +71,7 @@ main{
 }
 .about-info{
     display:grid;
-    grid-gap: 70px;
+    grid-gap: 40px;
     grid-template-areas: 
     'bioimage bio bio';
     grid-template-columns: 1fr;

@@ -48,7 +48,7 @@
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #444;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
@@ -105,7 +105,7 @@ body {
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       right: 0;
@@ -148,10 +148,10 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0.4rem;
+      transition: all 0.5s ease-out; }
       main .icons a:hover {
-        color: #eece1a;
-        transition: all 0.5s ease-out; }
+        color: #eece1a; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -159,7 +159,7 @@ main {
 
 .about-info {
   display: grid;
-  grid-gap: 70px;
+  grid-gap: 40px;
   grid-template-areas: 'bioimage bio bio';
   grid-template-columns: 1fr; }
 
